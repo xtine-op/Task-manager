@@ -1,7 +1,10 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:todo_app/util/my_button.dart';
 
 class DialogBox extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final controller;
   VoidCallback onSave;
   VoidCallback onCancel;
@@ -16,16 +19,18 @@ class DialogBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.pink[100],
+      backgroundColor: Colors.white,
+      // ignore: sized_box_for_whitespace
       content: Container(
-        height: 120,
+        width: 320,
+        height: 200,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             //get user input
             TextField(
               controller: controller,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: "Add a new task",
               ),
@@ -37,7 +42,7 @@ class DialogBox extends StatelessWidget {
                 //save button
                 MyButton(text: "Save", onPressed: onSave),
 
-                const SizedBox(width: 8),
+                const SizedBox(width: 16),
 
                 //cancel button
                 MyButton(text: "Cancel", onPressed: onCancel),
