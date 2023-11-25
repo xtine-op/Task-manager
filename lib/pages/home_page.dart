@@ -73,7 +73,19 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.orange[600],
-        title: const Text("To Do"),
+        title: const Text("Task Manager"),
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.notifications_outlined),
+            onPressed: () {},
+          ),
+        ],
+        leading: Image.asset(
+          'assets/todoapplogoblack.png',
+          width: 10,
+          height: 10,
+        ),
         elevation: 0,
       ),
       floatingActionButton: FloatingActionButton(
