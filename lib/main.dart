@@ -1,7 +1,9 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:lottie/lottie.dart';
+// import 'package:lottie/lottie.dart';
 import 'package:todo_app/pages/home_page.dart';
 
 void main() async {
@@ -42,7 +44,7 @@ class SplashScreen extends StatelessWidget {
           Text(
             'Task Manager',
             style: TextStyle(
-                fontSize: 24,
+                fontSize: 35,
                 fontWeight: FontWeight.bold,
                 color: Colors.orange.shade50),
           )
